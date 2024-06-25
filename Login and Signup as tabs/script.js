@@ -9,3 +9,11 @@ function applyStyle(id1, id2){
     element2.style.display = 'block';
     button2.style.backgroundColor = 'white';
 }
+
+function showText(id){
+    const parent = document.getElementById(id)
+    const input = parent.children[1]
+    const img = parent.lastElementChild
+    input.type = input.type === 'text'? 'password' : 'text'
+    img.setAttribute('src',img.getAttribute('src') === 'eye-closed.png' ? 'eye-opened.png' : 'eye-closed.png')
+}
